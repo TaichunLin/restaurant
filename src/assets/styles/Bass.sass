@@ -1,0 +1,214 @@
+$assetPath: "/images"
+
+$tabletWidth: 1600px
+$padWidth: 1024px
+$phoneWidth: 640px
+
+$tabletWidthNew: 1280px
+$padWidthNew: 1024px
+$padWidthSNew: 920px
+$phoneWidthNew: 414px
+$padBottomWidth: 80px
+$phoneBottomWidth: 60px
+
+$colorPrimary: #5c892d
+$colorSecondary: #b7d8e3
+$colorThirdary: #d5e8c0
+$colorFourthdary: #333
+$colorFifthdary: #919191
+$colorSixthdary: #9fb687
+
+$colorNone: #fff
+$colorRed: #e24242
+$colorDark: #333333
+$colorBlack: #0A0A14
+$colorLightGray: #F9F9F9
+$colorDarkGray: #AFAFAF
+$colorGray: #E3E3E3
+$colorYellow: #FFD040
+
+$fontFamilyPrimary: "Noto Sans TC"
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100400&display=swap')
+
+@mixin tablet
+  @media screen and (max-width: $tabletWidth)
+    @content
+@mixin pad
+  @media screen and (max-width: $padWidth)
+    @content
+@mixin phone
+  @media screen and (max-width: $phoneWidth)
+    @content
+@mixin tabletNew
+  @media screen and (max-width: $tabletWidthNew)
+    @content
+@mixin padNew
+  @media screen and (max-width: $padWidthNew)
+    @content
+@mixin padSNew
+  @media screen and (max-width: $padWidthSNew)
+    @content
+@mixin phoneNew
+  @media screen and (max-width: $phoneWidthNew)
+    @content
+*
+  margin: 0
+  padding: 0
+  box-sizing: border-box
+
+html
+  font-size: 14px
+  @include phone
+    font-size: 12.6px
+body
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif
+  font-size: 1em
+#root
+  height: 100%
+  .ant-layout
+    min-height: 100%
+
+h2, h3, h4, h5, h6
+  margin: 0
+  padding: 0
+
+h2
+  font-size: 2.571em
+h3
+  font-size: 2em
+h4
+  font-size: 1.714em
+h5
+  font-size: 1.429em
+h6
+  font-size: 1.286em
+
+.newVersion
+  font-size: 14px
+  h1
+    font-size: 3.43em
+  h2
+    font-size: 2.571em
+  h3
+    font-size: 2.143em
+  h4
+    font-size: 1.714em
+  h5
+    font-size: 1.429em
+  h6
+    font-size: 1.286em
+  .p
+    &-1
+      font-size: 1.286em
+    &-2
+      font-size: 1.143em
+  .caption
+    &-1
+      font-size: 1em
+    &-2
+      font-size: 0.857em
+
+.color
+  &-none
+    color: $colorNone
+  &-grey
+    color: $colorFifthdary
+  &-green
+    color: $colorPrimary
+  &-red
+    color: $colorRed
+  &-black
+    color: $colorFourthdary
+  &-darkGray
+    color: $colorDarkGray
+  &-gray
+    color: $colorGray
+  &-lightGray
+    color: $colorLightGray
+  &-yellow
+    color: $colorYellow
+
+.trendingTags
+  &__container
+    display: block
+  &__cardWrapper
+    display: flex
+    flex-direction: row
+  &__card
+    margin: 1rem
+    width: 10em
+    border: 2px solid $colorSecondary
+    border-radius: 5px
+    &--focus
+      background: $colorSecondary
+
+.App
+  max-width: 70rem
+  margin: 0 auto
+  &__container
+    display: flex
+  &__header
+    font-size: 1.5rem
+    color: rgb(36, 36, 36)
+    margin: 2em auto
+    padding: 0.5em
+    border-bottom: 0.5rem solid rgba(58, 58, 58, 0.548)
+    width: fit-content
+    span
+      font-size: 2.5rem
+      padding-right: 0.5em
+
+.reservation
+  &__input_container
+    width: 80%
+    padding: 0.5rem 1rem
+  &__header
+    font-size: 1.5rem
+    color: rgb(36, 36, 36)
+  &__container
+    width: 20%
+    border-right: 0.1rem solid rgba(58, 58, 58, 0.548)
+  &__cards_container
+    min-height: 35rem
+
+  &__card_container
+    background-color: white
+    padding: 0.5rem 1rem
+    border-radius: 0.4rem
+    box-shadow: 0.1rem 0.1rem 1rem rgba(0, 0, 0, 0.171)
+    width: 80%
+    margin: 1rem 0
+  &__input_container
+    input
+      width: 100%
+    button
+      width: 100%
+
+.customerCard
+  &__food_container
+    width: 80%
+    display: flex
+    flex-direction: column
+  &__food
+    display: flex
+  &__foods_container
+    display: flex
+    width: 100%
+    margin-top: 1rem
+    justify-content: space-between
+    p
+      margin-right: 1rem
+
+  &__foodCard_container
+    background-color: white
+    padding: 0.5rem 1rem
+    border-radius: 0.4rem
+    box-shadow: 0.1rem 0.1rem 1rem rgba(0, 0, 0, 0.171)
+    width: 80%
+    margin: 1rem
+    height: 5rem
+  &__food_input_container
+    display: flex
+    input
+      width: 5rem

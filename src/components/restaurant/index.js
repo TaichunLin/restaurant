@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
+
 import { addReservation } from "../../features/restaurant/reservationSlice";
 import CustomerCard from "./customers/customerCard";
 import ReservationCard from "./reservations/reservationCard";
@@ -20,7 +21,8 @@ export const Restraurant = () => {
   return (
     <div className="App">
       <h5 className="App__header">
-        <span>🍳</span>Leah's Restaurant
+        <span>🍳</span>
+        Leah's Restaurant
       </h5>
       <div className="App__container">
         <div className="reservation__container">

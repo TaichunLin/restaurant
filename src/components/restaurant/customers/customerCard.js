@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import { useDispatch } from "react-redux";
 import { addFoodToCustomer } from "../../../features/restaurant/customerSlice";
 
@@ -11,9 +11,14 @@ import { addFoodToCustomer } from "../../../features/restaurant/customerSlice";
 function CustomerCard({ id, name, food }) {
   const [customerFoodInput, setCustomerFoodInput] = useState("");
   const dispatch = useDispatch();
+  const colorRef = useRef();
+  const [color, setColor] = useState("#FFFFFF");
   return (
     <div className="customerCard">
-      <div className="customerCard__foodCard_container">
+      <div
+        style={{ backgroundColor: color }}
+        className="customerCard__foodCard_container"
+      >
         <h5>{name}</h5>
 
         <div className="customerCard__foods_container">
@@ -40,6 +45,15 @@ function CustomerCard({ id, name, food }) {
             >
               Add
             </button>
+            <div>
+              <input
+                type="color"
+                value={color}
+                onChange={(e) => {
+                  setColor(e.target.value);
+                }}
+              />
+            </div>
           </div>
         </div>
       </div>
